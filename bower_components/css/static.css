@@ -1,0 +1,16 @@
+#main {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: #efefef;
+}
+#header {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    line-height: 4rem;
+    text-align: center;
+    border-bottom:1px solid red;
+    margin-bottom: 1rem; 
+}

@@ -1,0 +1,46 @@
+<% include ../layout.html %>
+<html>
+    <body>
+        <% include ../common/header.html %> 
+        <div id="main">
+            <div class="row">
+                <% for(var i in movies){ %>
+                    <div class="col-sm-3 col-md-2">
+                        <div class="thumbnail">
+                            <img src="<%= movies[i].poster %>" alt="girl">
+                            <div class="caption">
+                                <h4>
+                                    <%= movies[i].title %>
+                                </h4>
+                                <p class="content"> 
+                                    <a href="/move?id=<%= movies[i]._id %>" class="btn btn-primary" role="button">观看预告片</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </body>
+</html>
+<style>
+    img{
+        width: 100%;
+        height: 15rem;
+    }
+    #main .row >div{
+        padding-top: 1rem;
+        border: 1px solid #1f1f1f;
+    }
+    #main .row >div+div{
+        margin-left: 1rem;
+    }
+    #main .row .content{
+        display: flex;
+        justify-content: center;
+    }
+    #main .row h4{
+        text-align: center;
+        padding-top: 0.5rem;
+    }
+</style>

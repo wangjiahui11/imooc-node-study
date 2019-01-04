@@ -1,0 +1,52 @@
+<% include ../layout.html %>
+<html>
+    <body>
+        <% include ../common/header.html %>
+        <div id="main">
+            <div class="row">
+                <div class="col-md-8 embedBox">
+                    <embed src="<%= movies.flash%>" width="100%"  quality="high" align="middle"
+                     allowscriptaccess="never"  allowfullscreen="true"  mode="transparent"  type="application/x-shockwave-flash"  wmode="transparent">
+                </div>
+                <div class="col-md-4 moveInfo">
+                    <p>
+                        <span>电影名称:</span>
+                        <span><%= movies.title%></span>
+                    </p>
+                    <p>
+                        <span>导演:</span>
+                        <span><%= movies.doctor%></span>
+                    </p>
+                    <p>
+                        <span>国家:</span>
+                        <span><%= movies.country%></span>
+                    </p>
+                    <p>
+                        <span>上映年份:</span>
+                        <span><%= movies.year%></span>
+                    </p>
+                    <p>
+                        <span>语言:</span>
+                        <span><%= movies.language%></span>
+                    </p>
+                    <p>
+                        <span>介绍:</span>
+                       <span><%= movies.summary%></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<style>
+    #main .embedBox embed{
+        height: 30rem;
+    }
+    #main .moveInfo{
+       margin: 2rem 0px;
+    }
+    #main .moveInfo p span{
+        line-height: 1.5rem;
+    }
+
+</style>

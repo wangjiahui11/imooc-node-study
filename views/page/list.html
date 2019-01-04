@@ -1,0 +1,46 @@
+<% include ../layout.html %>
+<html>
+
+<body>
+    <% include ../common/header.html %>
+    <div id="main">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>电影名称</td>
+                    <td>导演</td>
+                    <td>国家</td>
+                    <td>上映年份</td>
+                    <td>查看</td>
+                    <td>更新</td>
+                    <td>删除</td>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i in movies){ %>
+                <tr>
+                    <td><%= movies[i].title%></td>
+                    <td><%= movies[i].doctor%></td>
+                    <td><%= movies[i].country%></td>
+                    <td><%= movies[i].year%></td>
+                    <td class="check">查看</td>
+                    <td class="updata">更新</td>
+                    <td><span class="btn btn-danger">删除</span></td>
+                </tr>
+                <%}%>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
+<style>
+    #main td{
+        text-align: center;
+        vertical-align: middle;
+    }
+    .check,.updata{
+        cursor: pointer;
+        color: royalblue;
+    }
+</style>
